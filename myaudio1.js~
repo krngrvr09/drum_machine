@@ -9,7 +9,8 @@ document.getElementById("para").innerHTML=x;
 
 function loop(bpm)
 {	var delay=60/(bpm/1000);
-	for(var i=0;;i++)
+	alert("entered_loop");
+	/*for(var i=0;;i++)
 	{
     		setTimeout(function(){
 			if(document.getElementById(String(i)+"1").checked)
@@ -40,17 +41,17 @@ function loop(bpm)
     		},delay);
 
 		i=i%7
-	}
+	}*/
 }
 
 
 (function()
 {
 	clap = new Sound("clap.wav");
-	hat = new Sound("hat.wav");
+	/*hat = new Sound("hat.wav");
 	kick = new Sound("kick.wav");
 	snare = new Sound("snare.wav");
-	tom = new Sound("tom.wav");
+	tom = new Sound("tom.wav");*/
 
 	window.addEventListener("keydown",onKeyDown);
 

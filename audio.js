@@ -1,0 +1,39 @@
+(function()
+{
+	var ac = new webkitAudioContext();
+	alert("1");
+	var lasersound;
+	alert("2");
+	var getlaser = new XMLHttpRequest();
+	alert("3");
+	getlaser.open("GET","hat.wav",true);
+	alert("4");
+	getlaser.responseType = "arraybuffer";
+	alert("5");
+	getlaser.onload = function()
+	{	alert("6");
+		ac.decodeAudioData(getlaser.response, function(buffer)
+		{	alert("7");
+			lasersound = buffer;
+		});
+	}
+		alert("8");
+		getlaser.send();
+		window.addEventListener("keydown",onKeyDown);
+
+	function onKeyDown(e)
+	{	alert(e.keyCode);
+		//lasersound.play();
+		if(e.keyCode==90)
+		{		
+				alert("event caught");
+			//	lasersound.play();
+				var playsound = ac.createBufferSource();
+				playsound.buffer = lasersound;
+				playsound.connect(ac.destination);
+				playsound.noteOn(0);
+		}	//x
+	}
+} () );
+
+alert("end")

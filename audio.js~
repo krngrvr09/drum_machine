@@ -6,7 +6,7 @@
 	alert("2");
 	var getlaser = new XMLHttpRequest();
 	alert("3");
-	getlaser.open("GET","lethergo.mp3",true);
+	getlaser.open("GET","tom.wav",true);
 	alert("4");
 	getlaser.responseType = "arraybuffer";
 	alert("5");

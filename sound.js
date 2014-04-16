@@ -1,8 +1,8 @@
 
 function Sound(source)
-{
+{	alert("entered_sound_function");
 	if(!window.audioContext)
-	{
+	{	alert("creating_new_audio_context");
 		audioContext = new webkitAudioContext;
 	}
 	var that = this;
@@ -10,7 +10,7 @@ function Sound(source)
 	that.source = source;
 	that.buffer=null;
 	that.isLoaded = false;
-	
+	alert("1");
 	var getSound = new XMLHttpRequest();
 	getSound.open("GET",that.source,true);
 	getSound.responseType = "arraybuffer";
