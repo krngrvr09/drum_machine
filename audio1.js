@@ -6,8 +6,7 @@
 var x = document.getElementById("11").checked;
 document.getElementById("para").innerHTML=x;
 }*/
-
-
+var j=0;
 
 (function()
 {
@@ -16,59 +15,151 @@ document.getElementById("para").innerHTML=x;
 	kick = new Sound("kick.wav");
 	snare = new Sound("snare.wav");
 	tom = new Sound("tom.wav");
-
-	window.addEventListener("keydown",onKeyDown);
 	
-	function onKeyDown(e)
-	{	//alert(e.keyCode);
-		//lasersound.play();
-		//lasersound.play();
-		if(e.keyCode==76)
-		{	//alert("abouttoplay");
-			myloop();
-			//hat.play();
-			//kick.play();
-			//snare.play();
-			//tom.play();
-		}if(e.keyCode==90)
-		{	//alert("abouttoplay");
+	if (!(document.getElementById('11').checked)) {
+            alert("checked");
+        }
+	else
+	{
+		alert("not_checked");}
+	} () );
+
+function doSomething() {
+	//alert("fn called");
+	
+	if (j==0)
+	{	//alert("some");
+		//alert(document.getElementById('11').checked);
+		//alert("haha");
+		//clap.play();
+		if((document.getElementById('11').checked))
+		{
 			clap.play();
-			//hat.play();
-			//kick.play();
-			//snare.play();
-			//tom.play();
 		}
-		if(e.keyCode==88)
-		{	//alert("abouttoplay");
-			//clap.play();
+		if(document.getElementById('12').checked)
+		{
 			hat.play();
-			//kick.play();
-			//snare.play();
-			//tom.play();
-		}if(e.keyCode==67)
-		{	//alert("abouttoplay");
-			//clap.play();
-			//hat.play();
+		}
+		if(document.getElementById('13').checked)
+		{
 			kick.play();
-			//snare.play();
-			//tom.play();
-		}if(e.keyCode==86)
-		{	//alert("abouttoplay");
-			//clap.play();
-			//hat.play();
-			//kick.play();
+		}
+		if(document.getElementById('14').checked)
+		{
 			snare.play();
-			//tom.play();
-		}if(e.keyCode==66)
-		{	//alert("abouttoplay");
-			//clap.play();
-			//hat.play();
-			//kick.play();
-			//snare.play();
+		}
+		if(document.getElementById('15').checked)
+		{
 			tom.play();
-		}	//x
+		}
+
 	}
-} () );
+	if (j==1)
+	{
+		//alert(j);
+		if((document.getElementById('21').checked))
+		{
+			clap.play();
+		}
+		if(document.getElementById('22').checked)
+		{
+			hat.play();
+		}
+		if(document.getElementById('23').checked)
+		{
+			kick.play();
+		}
+		if(document.getElementById('24').checked)
+		{
+			snare.play();
+		}
+		if(document.getElementById('25').checked)
+		{
+			tom.play();
+		}
+	}
+	if (j==2)
+	{
+		//alert(j);
+		if((document.getElementById('31').checked))
+		{
+			clap.play();
+		}
+		if(document.getElementById('32').checked)
+		{
+			hat.play();
+		}
+		if(document.getElementById('33').checked)
+		{
+			kick.play();
+		}
+		if(document.getElementById('34').checked)
+		{
+
+			snare.play();
+		}
+		if(document.getElementById('35').checked)
+		{
+			tom.play();
+		}
+	}
+	if (j==3)
+	{
+		//alert(j);
+		if((document.getElementById('41').checked))
+		{
+			clap.play();
+		}
+		if(document.getElementById('42').checked)
+		{
+			hat.play();
+		}
+		if(document.getElementById('43').checked)
+		{
+			kick.play();
+		}
+		if(document.getElementById('44').checked)
+		{
+			snare.play();
+		}
+		if(document.getElementById('45').checked)
+		{
+			tom.play();
+		}
+	}
+	if (j==4)
+	{
+		//alert(j);
+		if((document.getElementById('51').checked))
+		{
+			clap.play();
+		}
+		if(document.getElementById('52').checked)
+		{
+			hat.play();
+		}
+		if(document.getElementById('53').checked)
+		{
+			kick.play();
+		}
+		if(document.getElementById('54').checked)
+		{
+			snare.play();
+		}
+		if(document.getElementById('55').checked)
+		{
+			tom.play();
+		}
+	}
+	
+	j=j+1; 
+	j=j%5;
+	 
+    }
+    window.onload = function () {
+        doSomething(); //Make sure the function fires as soon as the page is loaded
+        setInterval(doSomething, 250); //Then set it to run again after ten minutes
+    }
 
 alert("end")
 
